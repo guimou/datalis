@@ -1,0 +1,12 @@
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: oidc-configuration
+  labels:
+    app: keycloak
+stringData:
+  discovery-url: https://keycloak-keycloak.apps.cluster-1e51.1e51.sandbox491.opentlc.com/auth/realms/opendatahub/.well-known/openid-configuration  # yamllint disable-line rule:line-length
+  client-id: nifi-client
+  client-secret: client-secret
+type: Opaque

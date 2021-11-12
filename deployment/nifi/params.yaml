@@ -1,0 +1,8 @@
+---
+varReference:
+  - path: spec/volumeClaimTemplates[]/spec/storageClassName
+    kind: StatefulSet
+  - path: users[]
+    kind: SecurityContextConstraints
+  - path: spec/storageClassName
+    kind: PersistentVolumeClaim

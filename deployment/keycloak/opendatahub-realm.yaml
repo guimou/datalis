@@ -1,0 +1,16 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakRealm
+metadata:
+  name: opendatahub
+  labels:
+    app: sso
+spec:
+  instanceSelector:
+    matchLabels:
+      app: sso
+  realm:
+    displayName: Open Data Hub
+    enabled: true
+    id: opendatahub
+    realm: opendatahub
+    registrationAllowed: true 

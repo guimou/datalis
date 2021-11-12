@@ -1,0 +1,31 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: nifi-client
+  labels:
+    app: sso
+spec:
+  client:
+    clientAuthenticatorType: client-secret
+    clientId: nifi-client
+    defaultClientScopes:
+      - openid
+      - email
+    directAccessGrantsEnabled: false
+    enabled: true
+    id: fbf573d0-8033-432c-93ef-e0b81769e1d9
+    implicitFlowEnabled: false
+    name: NiFi
+    publicClient: false
+    redirectUris:
+      - >-
+        https://nifi-nifi.apps.cluster-1e51.1e51.sandbox491.opentlc.com:443/nifi-api/*
+    rootUrl: 'https://nifi-nifi.apps.cluster-1e51.1e51.sandbox491.opentlc.com/'
+    secret: client-secret
+    standardFlowEnabled: true
+    webOrigins:
+      - 'https://nifi-nifi.apps.cluster-1e51.1e51.sandbox491.opentlc.com/*'
+  realmSelector:
+    matchLabels:
+      app: sso
+  scopeMappings: {}

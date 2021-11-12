@@ -1,0 +1,19 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  labels:
+    app: sso
+  name: nifi-admin-user
+spec:
+  realmSelector:
+    matchLabels:
+      app: sso
+  user:
+    firstName: Admin
+    lastName: NiFi
+    username: admin
+    credentials:
+      - type: password
+        value: '12345'
+    email: admin@nifi.local
+    enabled: true
